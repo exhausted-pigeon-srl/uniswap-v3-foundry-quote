@@ -4,6 +4,9 @@ Get a Uniswap V3 quote (amount of token received for an exact amount of token se
 
 This contract is meant to be used within Forge test.
 
+## Installation
+either `npm i @exhausted-pigeon/uniswap-v3-forge-quoter` or `forge install exhausted-pigeon-srl/uniswap-v3-foundry-quote`
+
 ## Usage
 
 ```solidity
