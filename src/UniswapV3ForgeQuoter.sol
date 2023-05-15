@@ -1,7 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.19;
 
-import './interfaces/external/IUniswapV3Pool.sol';
+import '@uniswap/v3-core/contracts/interfaces/IUniswapV3Pool.sol';
+import '@uniswap/v3-core/contracts/libraries/TickMath.sol';
 
 /**
  * @title  Uniswap V3 Forge Test Quoter
@@ -17,10 +18,6 @@ import './interfaces/external/IUniswapV3Pool.sol';
 contract UniswapV3ForgeQuoter {
     // Emit when bubbling up Uniswap-related errors
     event LogError(string reason);   
-    
-    // Private to avoid import clash if TickMath library is used in the test
-    uint160 private constant MIN_SQRT_RATIO = 4295128739;
-    uint160 private constant MAX_SQRT_RATIO = 1461446703485210103287273052203988822378723970342;
 
     // Dummy variable to avoid "can be restricted to pure" error for the reverting callback
     uint256 private dummyHolder;
@@ -48,7 +45,7 @@ contract UniswapV3ForgeQuoter {
             recipient: address(this),
             zeroForOne: _zeroForOne,
             amountSpecified: int256(_amountIn),
-            sqrtPriceLimitX96: _zeroForOne ? MIN_SQRT_RATIO + 1 : MAX_SQRT_RATIO - 1, // Do not check the price limit
+            sqrtPriceLimitX96: _zeroForOne ? TickMath.MIN_SQRT_RATIO + 1 : TickMath.MAX_SQRT_RATIO - 1, // Do not check the price limit
             data: abi.encode(_zeroForOne) // Encode the zeroForOne parameter for the callback
         }) {}
         // Catch and bubble up Uniswap errors

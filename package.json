@@ -1,6 +1,6 @@
 {
     "name": "@exhausted-pigeon/uniswap-v3-forge-quoter",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Uniswap V3 Forge Test Quoter",
     "homepage": "https://github.com/exhausted-pigeon-srl/uniswap-v3-foundry-quote#readme",
     "repository": {
@@ -11,5 +11,8 @@
     "author": "Exhausted-Pigeon-SRL",
     "contributors": [
         "DrGorillaMD (https://github.com/drgorillamd)"
-    ]
+    ],
+    "dependencies": {
+        "@uniswap/v3-core": "^1.0.2-solc-0.8-simulate"
+    }
 }
