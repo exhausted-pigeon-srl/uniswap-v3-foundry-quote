@@ -1,0 +1,3 @@
+UniswapV3ForgeQuoterTest:test_quoteOneToZero() (gas: 111429)
+UniswapV3ForgeQuoterTest:test_quoteZeroToOne() (gas: 117444)
+UniswapV3ForgeQuoterTest:test_revertIfWrongTokenInAddress() (gas: 15293)
