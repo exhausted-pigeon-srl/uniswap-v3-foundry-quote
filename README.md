@@ -20,4 +20,3 @@ contract MyTest is UniswapV3ForgeQuoter {
     }
 }
 ```
-
