@@ -1,5 +1,5 @@
 {
-    "name": "@exhausted-pigeon/uniswap-v3-forge-quoter",
+    "name": "@exhausted-pigeon/uniswap-v3-foundry-quote",
     "version": "1.0.2",
     "description": "Uniswap V3 Forge Test Quoter",
     "homepage": "https://github.com/exhausted-pigeon-srl/uniswap-v3-foundry-quote#readme",
